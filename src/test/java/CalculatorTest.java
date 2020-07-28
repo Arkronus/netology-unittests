@@ -1,10 +1,5 @@
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class CalculatorTest {
     @Test
@@ -27,14 +22,4 @@ public class CalculatorTest {
         Assertions.assertEquals(Calculator.divide(15,3),5);
     }
 
-    @Test
-    void containsHamcrest(){
-        List<String> list = Arrays.asList("hello", "netology", "world");
-        Matchers.contains(list, Matchers.hasItems("hello", "netology"));
-    }
-
-    @Test
-    void closeToHamcrest(){
-        MatcherAssert.assertThat(10.3, Matchers.closeTo(10.3, 0.3));
-    }
 }
